@@ -1,0 +1,12 @@
+# Dependencies
+node_modules
+# Production code
+dist
+# Cache for parcel builds
+*.cache
+# Errors and logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
