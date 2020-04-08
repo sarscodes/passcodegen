@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passcodegen - Random Password Generator</title>
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <script src="./js/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>🔐 Passcodegen</h1>
+        <h2>A Random Password Generator.</h2>
+        <p>
+          Generate strong, secure and unique passwords instantly for free.
+        </p>
+        <section class="generator">
+          <form>
+            <input
+              type="text"
+              name="password"
+              id="password"
+              class="password"
+              readonly
+            />
+            <div class="buttons">
+              <button class="btn">Generate</button>
+              <button class="btn">Copy</button>
+            </div>
+            <h3>Password Strength:</h3>
+            <div class="strengths">
+              <span class="strength"></span>
+              <span class="strength"></span>
+              <span class="strength"></span>
+              <span class="strength"></span>
+              <span class="strength"></span>
+            </div>
+            <label>
+              Password Length:
+              <input
+                type="number"
+                name="length"
+                id="length"
+                min="4"
+                max="50"
+                value="6"
+                class="password-length"
+              />
+            </label>
+            <div class="options">
+              <label>
+                Numbers (0-9)
+                <input
+                  type="checkbox"
+                  name="number"
+                  id="number"
+                  class="option"
+                  checked
+                />
+              </label>
+              <label>
+                Letters (A-Z)
+                <input
+                  type="checkbox"
+                  name="letters"
+                  id="uppercase"
+                  class="option"
+                  checked
+                />
+              </label>
+              <label>
+                Letters (a-z)
+                <input
+                  type="checkbox"
+                  name="letters"
+                  id="lowercase"
+                  class="option"
+                  checked
+                />
+              </label>
+              <label>
+                Symbols (!~@;#_$)
+                <input
+                  type="checkbox"
+                  name="symbols"
+                  id="symbols"
+                  class="option"
+                  checked
+                />
+              </label>
+              <label for="repeat">
+                Repeat characters
+                <input
+                  type="checkbox"
+                  name="repeat"
+                  id="repeat"
+                  class="option"
+                  checked
+                />
+              </label>
+            </div>
+          </form>
+        </section>
+      </div>
+    </header>
+
+    <footer class="footer">
+      <div class="container">
+        <nav class="nav">
+          <a
+            href="https://github.com/sarscode/passcodegen/blob/master/README.md"
+            class="nav__link"
+            >About</a
+          >
+          <a href="https://github.com/sarscode/passcodegen" class="nav__link"
+            >View Source</a
+          >
+          <a
+            href="https://github.com/sarscode/passcodegen/issues"
+            class="nav__link"
+            >Report an issue</a
+          >
+          <a href="https://github.com/sarscode/passcodegen" class="nav__link"
+            >Contribute</a
+          >
+        </nav>
+        <div class="copyright">
+          <p>
+            Made with 💙 by
+            <a href="https://twitter.com/sarscode" class="link">sarscode</a> and
+            <a href="https://github.com/sarscode/passcodegen" class="link"
+              >opensourced</a
+            >. <br />Opensouce License -
+            <a
+              href="https://github.com/sarscode/passcodegen/blob/master/LICENSE"
+              class="link"
+              >MIT</a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
