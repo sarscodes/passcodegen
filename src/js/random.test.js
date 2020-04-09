@@ -1,3 +1,5 @@
+'use strict';
+
 const generateRandom = require('./random');
 
 test('Generate random number', () => {

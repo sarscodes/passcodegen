@@ -3,15 +3,16 @@
 const { alpha, symbols } = require('./characters.json');
 
 const generateRandom = () => {
+  const getRandom = (max, min = 0) => Math.floor(Math.random() * max + min);
+
   return {
-    number: () => Math.floor(Math.random() * 10),
-    lowercase: () => alpha[Math.floor(Math.random() * alpha.length)],
+    number: () => getRandom(10),
+    lowercase: () => alpha[getRandom(alpha.length)],
     /* Used standard funtion to point `this` to the Object returned by generateRandom */
     uppercase: function () {
-      console.log(this);
       return this.lowercase().toUpperCase();
     },
-    symbol: () => symbols[Math.floor(Math.random() * symbols.length)],
+    symbol: () => symbols[getRandom(symbols.length)],
   };
 };
 
