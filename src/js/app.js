@@ -44,4 +44,13 @@ copy.addEventListener('click', () => {
   const password = document.querySelector('#password');
   password.select();
   document.execCommand('copy');
+
+  const toast = document.createElement('span');
+  toast.setAttribute('class', 'toast');
+  toast.textContent = 'Copied!!!';
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.remove();
+  }, 1500);
 });
