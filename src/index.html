@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A Random Password Generator.Generate strong, secure and unique passwords instantly for free.">
+    <meta
+      name="description"
+      content="A Random Password Generator.Generate strong, secure and unique passwords instantly for free."
+    />
     <title>Passcodegen - Random Password Generator</title>
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./sass/main.scss" />
   </head>
   <body>
@@ -37,18 +40,19 @@
               <span class="strength"></span>
               <span class="strength"></span>
             </div>
-            <label>
+            <label for="length">
               Password Length:
-              <input
-                type="number"
-                name="length"
-                id="length"
-                min="4"
-                max="50"
-                value="6"
-                class="password-length"
-              />
             </label>
+            <input
+              type="range"
+              name="length"
+              id="length"
+              min="4"
+              max="40"
+              value="6"
+              step="1"
+              class="password-length"
+            />
             <div class="options">
               <label>
                 Numbers (0-9)
@@ -98,8 +102,8 @@
                   id="repeat"
                   class="option"
                   checked
-                /> -->
-              </label>
+                />
+              </label> -->
             </div>
           </form>
         </section>
