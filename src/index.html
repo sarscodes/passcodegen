@@ -32,17 +32,7 @@
               <button type="submit" class="btn" id="generate">Generate</button>
               <button type="button" class="btn" id="copy">Copy</button>
             </div>
-            <h3>Password Strength:</h3>
-            <div class="strengths">
-              <span class="strength"></span>
-              <span class="strength"></span>
-              <span class="strength"></span>
-              <span class="strength"></span>
-              <span class="strength"></span>
-            </div>
-            <label for="length">
-              Password Length:
-            </label>
+            <p>Your password is <span class="password-length"></span></p>
             <input
               type="range"
               name="length"
@@ -94,17 +84,7 @@
                   checked
                 />
               </label>
-              <!-- <label for="repeat">
-                Repeat characters
-                <input
-                  type="checkbox"
-                  name="repeat"
-                  id="repeat"
-                  class="option"
-                  checked
-                />
-              </label> -->
-            </div>
+              <!-- @TODO: Add repeat to toggle repeat characters in password -->
           </form>
         </section>
       </div>

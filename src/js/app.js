@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
 const generator = document.querySelector('#generator');
 const length = document.querySelector('#length');
 
+const passwordLength = document.querySelector('.password-length');
+passwordLength.textContent = ` ${length.value} characters long, Very Weak!!!`;
+
 generator.addEventListener('submit', (event) => {
   event.preventDefault();
   generatePassword();
@@ -14,6 +17,15 @@ generator.addEventListener('submit', (event) => {
 
 length.addEventListener('change', () => {
   generatePassword();
+  if (length.value < 6) {
+    passwordLength.textContent = `${length.value} characters long, Very Weak!!!`;
+  } else if (length.value >= 6 && length.value < 8) {
+    passwordLength.textContent = `${length.value} characters long, Weak!!!`;
+  } else if (length.value >= 8 && length.value < 12) {
+    passwordLength.textContent = `${length.value} characters long, Strong!!!`;
+  } else {
+    passwordLength.textContent = `${length.value} characters long, Very Strong!!!`;
+  }
 });
 
 const generatePassword = () => {
